@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html ng-app="workPortal">
+    <head>
+        <title>Portal de Vacaciones</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <!-- Mobile -->
+        <link href="css/mobile.css" rel="stylesheet" type="text/css" media="screen and (min-width:240px) and (max-width:500px)"/>
+        <!-- Tablet -->
+        <link href="css/tablet.css" rel="stylesheet" type="text/css" media="screen and (min-width:501px) and (max-width:786px)" />
+        <!-- Screen -->
+        <link href="css/screen.css" rel="stylesheet" type="text/css" media="screen and (min-width:786px) and (max-width:1600px)" />
+        <script src="js/angular.min.js"></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/directives.js"></script>
+        <script src="js/filters.js"></script>
+    </head>
+    <body ng-controller="PortalController as portal">
+	<portal-header></portal-header>
+	<items-list id='wrapper'></items-list>
+    </body>
+</html>

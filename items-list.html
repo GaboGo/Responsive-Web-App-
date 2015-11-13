@@ -1,0 +1,27 @@
+<li ng-repeat="item in portal.items | orderBy:'requestDate':false">
+<a ng-click="showDetails = ! showDetails">
+    <div class="item">
+    <img src="{{item.image}}" class="list-icon"/>
+    <p class="line1">{{item.employee}}</p>
+    <p class="line2">Enviada el: {{item.requestDate|date:'mediumDate'}}</p>
+    <span class="bubble" ng-show='item.approved|isUndo'>{{item.beginDate|getDays:item.endDate}}</span>
+    <span class="bubbleApproved" ng-show='item.approved|isApproved'>{{item.beginDate|getDays:item.endDate}}</span>
+    <span class="bubbleRejected" ng-show='item.approved|isRejected'>{{item.beginDate|getDays:item.endDate}}</span>
+   </div>
+</a>
+
+<a ng-click="showDetails = ! showDetails">
+    <div class="item-details" ng-class="{ 'hidden': ! showDetails }">
+       <img src="img/back.png" class="back-btn"/>
+       <div class="item-approved" ng-show='item.approved|isApproved'>Aprobada</div>
+       <div class="item-rejected" ng-show='item.approved|isRejected'>Rechazada</div>
+       <img src="{{item.image}}" class="detailed-icon"/>
+       <p>Numero de Dias: {{item.beginDate|getDays:item.endDate}}</p>
+       <p>Desde: {{item.beginDate|date:'mediumDate'}}</p>
+       <p>Hasta: {{item.endDate|date:'mediumDate'}}</p>
+       <p>Ultimas Vacaciones en: {{item.lastVacationOn|date:'mediumDate'}}</p>
+       <button ng-show='item.approved|isUndo' ng-click="button.setApproved(item)" class='approve-btn'>Aprobada</button>
+       <button ng-show='item.approved|isUndo' ng-click="button.setRejected(item)" class='reject-btn'>Rechazada</button>
+   </div>
+ </a>
+</li>

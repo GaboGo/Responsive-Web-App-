@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+    xmlns:gap = "http://phonegap.com/ns/1.0"
+    id        = "com.unir.phonegapApp"
+    version   = "3.1.5">
+
+<name>Phonegap App</name>
+
+<description>
+Aplicacion de prueba phonegap
+</description>
+
+<author>
+Gabriel Goethe
+</author>
+	
+	
+	<preference name="phonegap-version" value="3.1.0" />
+	<gap:plugin name="com.phonegap.plugins.pushplugin" version="2.1.1" />
+    <gap:plugin name="org.apache.cordova.splashscreen" version="0.2.7" />
+	<gap:plugin name="com.phonegap.plugin.statusbar" version="1.1.0" />
+	<gap:plugin name="org.apache.cordova.device" version="0.2.8" />
+	<gap:plugin name="org.apache.cordova.geolocation" version="0.3.7" />
+	<gap:plugin name="org.apache.cordova.inappbrowser" version="0.2.4" />
+	<gap:plugin name="org.apache.cordova.network-information" version="0.2.7" />
+	<gap:plugin name="org.apache.cordova.vibration" version="0.3.7" />
+	<gap:plugin name="org.apache.cordova.dialogs" version="0.2.6" />
+	<preference name="orientation" value="portrait" />
+	<preference name="target-device" value="handset" />
+	<preference name="fullscreen" value="false" />
+	<preference name="stay-in-webview" value="false" />
+	<preference name="webviewbounce" value="false" />   
+	<preference name="splash-screen-duration" value="1500" />
+	
+	<access origin="*" />
+	
+</widget>
